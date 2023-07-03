@@ -1,0 +1,104 @@
+{
+  "companies": [
+    {
+      "name": "HSBC",
+      "phoneDirectory": {
+        "baseNumber": "22333000",
+        "extensions": [
+          {
+            "id": "1",
+            "info": "廣東話",
+            "layers": [
+              {
+                "id": "1",
+                "name": "網上理財及流動理財服務"
+              },
+              {
+                "id": "2",
+                "name": "電話理財登記及密碼重設"
+              },
+              {
+                "id": "3",
+                "name": "自動櫃員機、扣賬卡及相關服務"
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "info": "英文",
+            "layers": [
+              {
+                "id": "1",
+                "name": "Peter"
+              },
+              {
+                "id": "2",
+                "name": "Pen"
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "info": "Sales info",
+            "layers": [
+              {
+                "id": "1",
+                "name": "Kay"
+              },
+              {
+                "id": "2",
+                "name": "Jay"
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "info": "12",
+            "layers": [
+              {
+                "id": "1",
+                "name": "12"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "New Company",
+      "phoneDirectory": {
+        "baseNumber": "56789000",
+        "extensions": [
+          {
+            "id": "1",
+            "info": "HR",
+            "layers": [
+              {
+                "id": "1",
+                "name": "Alice"
+              },
+              {
+                "id": "2",
+                "name": "Bob"
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "info": "Engineering",
+            "layers": [
+              {
+                "id": "1",
+                "name": "Charlie"
+              },
+              {
+                "id": "2",
+                "name": "Diana"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
