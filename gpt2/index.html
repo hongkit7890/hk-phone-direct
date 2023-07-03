@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Directory</title>
+    <style>
+        .company-container {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        let data;
+
+        async function fetchData() {
+            const response = await fetch('phone2.json');
+            data = await response.json();
+            init();
+        }
+
+        function displayExtensions(company) {
+            const extensions = company.phoneDirectory.extensions;
+            let output = '<ul>';
+            for (const extension of extensions) {
+                output += `<li onclick="displayLayers('${company.name}', '${extension.id}')">${extension.id} - ${extension.info}</li>`;
+            }
+            output += '</ul>';
+            document.getElementById('app').innerHTML = output;
+        }
+
+        function displayLayers(companyName, extensionId) {
+            const company = data.companies.find(c => c.name === companyName);
+            const extension = company.phoneDirectory.extensions.find(e => e.id === extensionId);
+            let output = `<h3>${companyName} - ${extension.info}</h3>`;
+            output += '<ul>';
+            for (const layer of extension.layers) {
+                output += `<li>${layer.id} - ${layer.name}</li>`;
+            }
+            output += '</ul>';
+            document.getElementById('app').innerHTML = output;
+        }
+
+        function init() {
+            let output = '';
+            for (const company of data.companies) {
+                output += `<div class="company-container" onclick="displayExtensions('${company.name}')">${company.name}</div>`;
+            }
+            document.getElementById('app').innerHTML = output;
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>
