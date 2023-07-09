@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@pgrabovets/json-view": "^2.7.1",
+    "dayjs": "^1.11.9"
+  }
+}

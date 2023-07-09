@@ -48,7 +48,7 @@
         function init() {
             let output = '';
             for (const company of data.companies) {
-                output += `<div class="company-container" onclick="displayExtensions('${company.name}')">${company.name}</div>`;
+                output += `<div class="company-container" onclick="displayExtensions('${company.name.replace(/'/g, "\\'")}')">${company.name}</div>`;
             }
             document.getElementById('app').innerHTML = output;
         }
