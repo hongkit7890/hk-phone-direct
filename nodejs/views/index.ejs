@@ -1,0 +1,12 @@
+<%- include('header.ejs') %>
+
+    <h1><%=title%></h1>  
+    <h2><%=now%></h2>  
+    <% if(blogs.length) { %>
+        <% blogs.forEach(article => { %>
+            <h2><%=article.title%></h2>
+            <p><%=article.author%></p>
+        <% }) %>
+    <% } %>
+    <script src="test.js"></script>
+    <%- include('footer.ejs') %>
